@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Votre Blog</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <main>
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <img src="images/article1/amazonie.jpg" alt="Les Merveilles de l'Amazonie">
+                <div class="carousel-caption">
+                    <h5>Les Merveilles de l'Amazonie</h5>
+                    <p>Un aperçu de la biodiversité foisonnante de la forêt tropicale...</p>
+                    <button onclick="window.location.href='articles/article1.html';">Lire l'article</button>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="images/article2/sahara.jpg" alt="Les Mystères du Sahara">
+                <div class="carousel-caption">
+                    <h5>Les Mystères du Sahara</h5>
+                    <p>Découvrez l'immensité et la beauté du plus grand désert chaud...</p>
+                    <button onclick="window.location.href='articles/article2.html';">Lire l'article</button>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="images/article3/mer-du-nord-lighthouse.jpg" alt="La Beauté Sauvage de la Mer du Nord">
+                <div class="carousel-caption">
+                    <h5>La Beauté Sauvage de la Mer du Nord</h5>
+                    <p>Explorez les rivages robustes et les eaux agitées de la Mer du Nord...</p>
+                    <button onclick="window.location.href='articles/article3.html';">Lire l'article</button>
+                </div>
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+        <section class="video-transcript-container">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Vidéo YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="transcript-container">
+                <button onclick="toggleTranscript()" class="transcript-btn">Transcript</button>
+                <div id="transcript" style="display:none;">
+                    <p>We're no strangers to love</p>
+                    <p>   You know the rules and so do I (do I)</p>
+                    <p>   You know the rules and so do I (do I)</p>
+                    <p> A full commitment's what I'm thinking of</p>
+                    <p> You wouldn't get this from any other guy</p>
+                    <p> I just wanna tell you how I'm feeling</p>
+                    <p> Gotta make you understand</p>
+                    <p> Never gonna give you up</p>
+                    <p> Never gonna let you down</p>
+                    <p> Never gonna run around and desert you</p>
+                    <p> Never gonna make you cry</p>
+                    <p> Never gonna say goodbye</p>
+                    <p> Never gonna tell a lie and hurt you</p>
+                    <p> We've known each other for so long</p>
+                    <p> Your heart's been aching, but you're too shy to say it (say it)</p>
+                    <p> Inside, we both know what's been going on (going on)</p>
+                    <p> We know the game and we're gonna play it</p>
+                    <p> And if you ask me how I'm feeling</p>
+                    <p> Don't tell me you're too blind to see</p>
+                    <p> Never gonna give you up</p>
+                    <p> Never gonna let you down</p>
+                    <p> Never gonna run around and desert you</p>
+                    <p> Never gonna make you cry</p>
+                    <p> Never gonna say goodbye</p>
+                    <p> Never gonna tell a lie and hurt you</p>
+                    <p> Never gonna give you up</p>
+                    <p> Never gonna let you down</p>
+                    <p> Never gonna run around and desert you</p>
+                    <p> Never gonna make you cry</p>
+                    <p> Never gonna say goodbye</p>
+                    <p> Never gonna tell a lie and hurt you</p>
+                    <p> We've known each other for so long</p>
+                    <p> Your heart's been aching, but you're too shy to say it (to say it)</p>
+                    <p> Inside, we both know what's been going on (going on)</p>
+                    <p> We know the game and we're gonna play it</p>
+                    <p> I just wanna tell you how I'm feeling</p>
+                    <p> Gotta make you understand</p>
+                    <p> Never gonna give you up</p>
+                    <p> Never gonna let you down
+                    <p> Never gonna run around and desert you</p>
+                    <p> Never gonna make you cry</p>
+                    <p>Never gonna say goodbye</p>
+                    <p>Never gonna tell a lie and hurt you</p>
+                    <p>Never gonna give you up</p>
+                    <p>Never gonna let you down</p>
+                    <p>Never gonna run around and desert you</p>
+                    <p>Never gonna make you cry</p>
+                    <p> Never gonna say goodbye</p>
+                    <p> Never gonna tell a lie and hurt you</p>
+                    <p> Never gonna give you up</p>
+                    <p> Never gonna let you down</p>
+                    <p> Never gonna run around and desert you</p>
+                    <p> Never gonna make you cry</p>
+                    <p> Never gonna say goodbye</p>
+                    <p> Never gonna tell a lie and hurt you</p>
+                </div>
+            </div>
+        </section>
+        <table>
+            <thead>
+              <tr>
+                <th>Article</th>
+                <th>Description</th>
+                <th>Auteur</th>
+                <th>Date de publication</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Les Merveilles de l'Amazonie</td>
+                <td>Un aperçu de la biodiversité foisonnante de la forêt tropicale...</td>
+                <td>Jean Dupont</td>
+                <td>01/01/2024</td>
+              </tr>
+              <tr>
+                <td>Les Mystères du Sahara</td>
+                <td>Découvrez l'immensité et la beauté du plus grand désert chaud...</td>
+                <td>Martine Durand</td>
+                <td>15/02/2024</td>
+              </tr>
+              <tr>
+                <td>La Beauté Sauvage de la Mer du Nord</td>
+                <td>Explorez les rivages robustes et les eaux agitées de la Mer du Nord...</td>
+                <td>Alain Terrieur</td>
+                <td>23/03/2024</td>
+              </tr>
+            </tbody>
+          </table>
+    </main>
+    <script>
+            function toggleTranscript() {
+        var transcript = document.getElementById("transcript");
+        if (transcript.style.display === "none") {
+            transcript.style.display = "block";
+        } else {
+            transcript.style.display = "none";
+        }
+        }   
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const showSlide = () => {
+            slides.forEach((slide, index) => {
+                slide.style.display = 'none';
+            });
+            slides[slideIndex].style.display = 'block';
+        }
+        const moveSlide = (n) => {
+            slideIndex += n;
+            if (slideIndex >= slides.length) { slideIndex = 0; }
+            else if (slideIndex < 0) { slideIndex = slides.length - 1; }
+            showSlide();
+        }
+        document.addEventListener('DOMContentLoaded', showSlide);
+    </script>
+    <script src="../js/scripts.js"></script>
+</body>
+</html>

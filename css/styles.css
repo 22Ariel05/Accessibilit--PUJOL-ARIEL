@@ -1,0 +1,439 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #333;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-logo img {
+    height: 80px;
+    width: auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-logo, .comment-link {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.comment-link {
+    background-color: #005a9c;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.comment-link:hover {
+    background-color: #004080;
+}
+
+.nav-links {
+    margin-left: auto;
+}
+
+.nav-item {
+    padding: 8px 16px;
+    margin: 0 10px;
+    background-color: #005a9c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-item:hover {
+    background-color: #004080;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+article {
+    max-width: 800px;
+    width: 100%;
+    margin: 20px 0;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+}
+
+article h2, article h3, article p {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.blog-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.blog-card {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.blog-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-content {
+    padding: 15px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #005a9c;
+    color: white;
+    border: none;
+    border-radius: 0 0 10px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #004080;
+}
+
+.comments {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: auto;
+}
+
+.comment {
+    position: relative;
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.comment p {
+    flex-grow: 1;
+    margin: 0;
+}
+
+.comment-link {
+    background-color: #005a9c;
+    margin: 0 10px;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.comments ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.comment h3 {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.comment-toggle {
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+.comment-content {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.delete-comment {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 16px;
+    width: 16px;
+    height: 16px;
+    color: #878585;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.delete-comment:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#commentForm {
+    display: flex;
+    margin-top: 20px;
+}
+
+#commentInput {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(100% - 22px);
+}
+
+#commentForm button {
+    width: auto;
+    padding: 10px 20px;
+}
+
+#commentForm button:hover {
+    background-color: #004080;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+#contactForm {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#contactForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm input[type="tel"],
+#contactForm select,
+#contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+#contactForm textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+#contactForm button[type="submit"] {
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #005a9c;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: background-color 0.2s;
+}
+
+#contactForm button[type="submit"]:hover {
+    background-color: #004080;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: none;
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.carousel-slide.active {
+    display: block;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    height: auto;
+    padding: 16px;
+    color: black;
+    font-size: 24px;
+    background: none;
+    border: none;
+    user-select: none;
+}
+
+.prev:hover, .next:hover {
+    color: white;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 12px 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+}
+
+.carousel-caption h5 {
+    margin: 0 0 8px;
+    font-size: 1.25em;
+}
+
+.carousel-caption p {
+    margin: 0 0 12px;
+    font-size: 1em;
+}
+
+.carousel-caption button {
+    border: none;
+    background-color: #005a9c;
+    color: white;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-size: 1em;
+    margin-top: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-caption button:hover {
+    background-color: #004080;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+  
+table, th, td {
+    border: 1px solid #ddd;
+}
+  
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+  
+th {
+    background-color: #f2f2f2;
+    color: black;
+}
+  
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+  
+tr:hover {
+    background-color: #eaeaea;
+}
+.video-transcript-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.video-container, .transcript-container {
+    flex: 1;
+}
+
+.transcript-btn {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.video-transcript-container {
+    margin-top: 50px;
+}
